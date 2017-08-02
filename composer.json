@@ -1,5 +1,5 @@
 {
-  "name": "orkestra/transactor-bundle",
+  "name": "pocomos/transactor-bundle",
   "description": "Integrates the Orkestra Transactor with Symfony 2",
   "type": "symfony-bundle",
   "license": "MIT",
