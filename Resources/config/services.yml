@@ -11,14 +11,14 @@ services:
     class: Orkestra\Transactor\Transactor\NetworkMerchants\CardTransactor
     arguments:
       - @orkestra.transactor.guzzle_client
-      - @pocomos.entity_manager
+      - @doctrine.orm.default_entity_manager
     tags:
       - { name: orkestra.transactor }
   orkestra.transactor.network_merchants.ach:
     class: Orkestra\Transactor\Transactor\NetworkMerchants\AchTransactor
     arguments:
       - @orkestra.transactor.guzzle_client
-      - @pocomos.entity_manager
+      - @doctrine.orm.default_entity_manager
     tags:
       - { name: orkestra.transactor }
   orkestra.transactor.payments_xpress.ach:
