@@ -14,11 +14,11 @@
     "pocomos/transactor": "dev-master"
   },
   "require-dev": {
-    "symfony/framework-bundle": "2.3.*",
-    "symfony/dependency-injection": "2.3.*",
-    "symfony/yaml": "2.3.*",
-    "symfony/form": "2.3.*",
-    "doctrine/orm": "2.3.*"
+    "symfony/framework-bundle":  "~2.3",
+    "symfony/dependency-injection":  "~2.3",
+    "symfony/yaml": "~2.3",
+    "symfony/form": "~2.3",
+    "doctrine/orm": "~2.3"
   },
   "autoload": {
     "psr-0": { "Orkestra\\Bundle\\TransactorBundle": "" }
