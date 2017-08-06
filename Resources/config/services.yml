@@ -21,11 +21,6 @@ services:
       - @doctrine.orm.entity_manager
     tags:
       - { name: orkestra.transactor }
-  orkestra.transactor.payments_xpress.ach:
-    class: Orkestra\Transactor\Transactor\PaymentsXpress\AchTransactor
-    arguments: [ @orkestra.transactor.guzzle_client ]
-    tags:
-      - { name: orkestra.transactor }
   orkestra.transactor.generic.generic:
     class: Orkestra\Transactor\Transactor\Generic\GenericTransactor
     tags:
@@ -34,21 +29,6 @@ services:
     class: Orkestra\Transactor\Transactor\Generic\PointsTransactor
     tags:
       - { name: orkestra.transactor }
-  orkestra.transactor.authorize_net.card:
-    class: Orkestra\Transactor\Transactor\AuthorizeNet\CardTransactor
-    arguments:
-      -  @orkestra.transactor.guzzle_client
-      -  @orkestra.transactor.serializer.authorize_net_transaction
-    tags:
-      - { name: orkestra.transactor }
-  orkestra.transactor.authorize_net.ach:
-    class: Orkestra\Transactor\Transactor\AuthorizeNet\AchTransactor
-    arguments:
-      -  @orkestra.transactor.guzzle_client
-      -  @orkestra.transactor.serializer.authorize_net_transaction
-    tags:
-      - { name: orkestra.transactor }
-
 
   # Track Decoders
   orkestra.transactor.decoder.iso7813:
