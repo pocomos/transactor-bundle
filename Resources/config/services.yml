@@ -29,6 +29,10 @@ services:
     class: Orkestra\Transactor\Transactor\Generic\PointsTransactor
     tags:
       - { name: orkestra.transactor }
+  orkestra.transactor.network_merchants.tokenizer:
+    class: Orkestra\Transactor\Tokenization\NetworkMerchants\Tokenizer
+    tags:
+      - { name: orkestra.tokenizer }
 
   # Track Decoders
   orkestra.transactor.decoder.iso7813:
