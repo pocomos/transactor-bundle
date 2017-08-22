@@ -11,14 +11,12 @@ services:
     class: Orkestra\Transactor\Transactor\NetworkMerchants\CardTransactor
     arguments:
       - @orkestra.transactor.guzzle_client
-      - @doctrine.orm.entity_manager
     tags:
       - { name: orkestra.transactor }
   orkestra.transactor.network_merchants.ach:
     class: Orkestra\Transactor\Transactor\NetworkMerchants\AchTransactor
     arguments:
       - @orkestra.transactor.guzzle_client
-      - @doctrine.orm.entity_manager
     tags:
       - { name: orkestra.transactor }
   orkestra.transactor.generic.generic:
@@ -31,6 +29,10 @@ services:
       - { name: orkestra.transactor }
   orkestra.transactor.network_merchants.tokenizer:
     class: Orkestra\Transactor\Tokenization\NetworkMerchants\Tokenizer
+    arguments:
+      - @orkestra.transactor.guzzle_client
+      - @orkestra.transactor.network_merchants.card
+      - @orkestra.transactor.network_merchants.ach
     tags:
       - { name: orkestra.tokenizer }
 
