@@ -31,11 +31,6 @@ class EncryptionClassMetadataSubscriber implements EventSubscriber
         if ('Orkestra\Transactor\Entity\AbstractAccount' === $metadata->name) {
             $metadata->fieldMappings['accountNumber']['type'] = 'encrypted_string';
             $metadata->fieldMappings['accountToken']['type'] = 'encrypted_string';
-        } elseif ('Orkestra\Transactor\Entity\Account\SwipedCardAccount' === $metadata->name) {
-            $metadata->fieldMappings['trackOne']['type']
-                = $metadata->fieldMappings['trackTwo']['type']
-                = $metadata->fieldMappings['trackThree']['type']
-                = 'encrypted_string';
         }
     }
 
