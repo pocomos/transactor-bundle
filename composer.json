@@ -11,7 +11,7 @@
   ],
   "require": {
     "php": ">=5.3.3",
-    "pocomos/transactor": "dev-account_token"
+    "pocomos/transactor": "dev-descriptions_added"
   },
   "require-dev": {
     "symfony/framework-bundle":  "~2.3",
